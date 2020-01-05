@@ -20,11 +20,13 @@ nav{
 	width: 30%;
 	display: flex;
 	justify-content:space-between;
+	box-sizing: border-box;
 	align-items:center;
 }
 
 nav a{
 	width: 33.3%;
+	box-sizing: border-box;
 	font-size: 1em;
 	text-decoration-line: none;
 }
@@ -32,9 +34,9 @@ nav a{
 /* cabecera */
 header{
 	width:100%;
-	color: white;
 	background-color: #5b7989;
 	border-radius: 10px 10px 0 0 ;
+	color: white;
 	display: flex;
 	justify-content:space-between;
 	align-items:center;
@@ -51,55 +53,42 @@ header h1{
 }
 
 /* Contenedor principal */
-#contenedor-body{
+#contenedor-Principal{
 	width: 100%;
 }
 
-/* Imagen principal*/
-#ImagenPrincipal{	
+/* Galeria*/
+#Galeria{	
 	width: 100%;
-	background-color: #82c3a6;
+	background-color: #d5c75f;
+	display: flex;
+	flex-direction: row;
+	box-sizing: border-box;
 	padding-top: 1em;
 	padding-bottom: 1em;
 }
 
-#ImagenPrincipal figure{
-	width: 60%;
-	display: block;
+/* Columnas principal*/
+.columna-principal{
+	width: 33.3%;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+}
+
+figure{
+	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-
-/* Imagen secundaria */
-
-#ImagenSecundaria{
-	width: 100%;
-	display: flex;
-	justify-content:space-between;
-	align-items:center;
-	background-color: #d5c75f;
-	border: 1px;
-}
-
-/* Imagen paisaje*/
-#ImagenPaisaje{
-	width: 50%;
-}
-
-/* Imagen retrato*/
-#ImagenRetrato{
-	width: 50%;
-}
-
+/* Imagenes */
 figure img{
 	width: 100%;
-	box-shadow: 2px 2px #02010a;
 }
 
-figcaption{
-	text-align: center;
-}
 
 
 /* Footer*/
@@ -158,6 +147,7 @@ p{
 }
 
 
+
 /* Media queris */
 /*
 @media (min-width: 900px) {
@@ -173,3 +163,4 @@ p{
 	}
 }
 */
+
