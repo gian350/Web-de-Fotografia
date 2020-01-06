@@ -12,9 +12,17 @@ body{
 	box-sizing: border-box;
 	background-color: #02010a;
 	font-family: DancingScript;
+	animation: miAnimacion 1.5s;
 }
 
-
+/* transicion de la pagina actual */
+@-webkit-keyframes miAnimacion{
+	from {/* Aqui el incio*/
+		transform: translate(0, 20cm);
+	}to {/* Aqui va el final*/
+		transform: translate(0, 0);
+	}
+}
 	
 /* Barra de navegacion */
 nav{
