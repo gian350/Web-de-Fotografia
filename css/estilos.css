@@ -7,31 +7,49 @@
 /* Cuerpo */
 body{
 	font-size: 1.5em;
-	margin-left: 5em;
-	margin-right: 5em;
-	margin-top: 2em;
+	margin-left: 20%;
+	margin-right: 20%;
 	box-sizing: border-box;
 	background-color: #02010a;
 	font-family: DancingScript;
 }
 
+
+	
 /* Barra de navegacion */
 nav{
-	width: 30%;
+	width: 40%;
 	display: flex;
 	justify-content:space-between;
 	align-items:center;
+	margin-right: 2em;
 }
 
 nav a{
 	width: 33.3%;
+	box-sizing: border-box;
 	font-size: 1em;
+	font-weight: normal;
+}
+
+nav a:visited,nav a:link{
+	color: white;
+}
+
+#Hiper-actual{
 	text-decoration-line: none;
 }
+	
+#menu a{
+	width: 100%;
+	text-align: center;
+}
+
 
 /* cabecera */
 header{
 	width:100%;
+	font-size: 0.8em;
 	color: white;
 	background-color: #5b7989;
 	border-radius: 10px 10px 0 0 ;
@@ -41,13 +59,9 @@ header{
 }
 
 header h1{
-	width: 70%;
+	width: 60%;
 	margin-left: 1.5em;
 	text-shadow: 2px 2px #02010a;
-}
-
-#menu{
-	margin-right: 2em;
 }
 
 /* Contenedor principal */
@@ -71,8 +85,8 @@ header h1{
 }
 
 
-/* Imagen secundaria */
 
+/* Imagen secundaria */
 #ImagenSecundaria{
 	width: 100%;
 	display: flex;
@@ -87,11 +101,30 @@ header h1{
 	width: 50%;
 }
 
+#ImagenPaisaje img{
+	transition: .4s all;/* tiempo para rotar*/
+}
+
+#ImagenPaisaje img:hover{
+	transform: rotate(10deg);
+}
+
 /* Imagen retrato*/
 #ImagenRetrato{
 	width: 50%;
 }
 
+#ImagenRetrato img{
+	width: 100%;
+	transition: .4s all;/* tiempo para transladar*/
+}
+
+#ImagenRetrato img:hover{
+	transform: translate(20px,-5px);
+}
+
+
+/* Para todas las imagenes*/
 figure img{
 	width: 100%;
 	box-shadow: 2px 2px #02010a;
@@ -159,17 +192,74 @@ p{
 
 
 /* Media queris */
-/*
+
+/* Destopk */
 @media (min-width: 900px) {
 	#contenedor-body{
 		max-width: 900px;
 	}
 }
- */
-/*
+
+/* Celular */
 @media (max-width: 900px) {
+
+	
+	/* cabecera */
+	header{
+		display: flex;
+		flex-direction: column;
+
+	}
+	
+	header h1{
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 15px;
+		text-align: center;
+	}
+	/* Menu */
+	#menu{
+		width: 70%;
+		margin-bottom: 20px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	#menu a{
+		width: 100%;
+		text-align: center;
+	}
+
+	/* conenedor principal */
 	#contenedor-body{
 		width: 100%;
 	}
+
+	/* Imagenes */
+		
+	#ImagenSecundaria{
+		width: 100%;
+		flex-wrap: wrap;
+	}
+
+	#ImagenPaisaje{
+		width: 100%;
+	}	
+	#ImagenRetrato{
+		width: 100%;
+	}
+	
+	/* Footer */
+	#contenedor-Footer{
+		flex-wrap: wrap;
+	}
+
+	.columna{
+		width: 100%;
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+
 }
-*/
+	
